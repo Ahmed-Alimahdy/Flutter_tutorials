@@ -9,7 +9,23 @@ class LayoutBuilder_widget extends StatelessWidget {
           if(constraints.maxWidth < 500) {
             return const Text("M O B I L E");
           } else {
-            return const Text("D E S K T O P");
+            return Column(
+              children: [
+                Expanded(
+                  child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: AspectRatio(
+                        aspectRatio: 6 / 19,
+                        child: Container(
+                          width: 2000,
+                          color: Colors.deepPurple[300],
+                          child: const Text("D E S K T O P"),
+                        ),
+                      ),
+                    ),
+                ),
+              ],
+            );
           }
         },);
   }
