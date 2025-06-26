@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorials/Inherited_widgets/Controller/Controller.dart';
 import 'package:flutter_tutorials/Inherited_widgets/View/Pages/Homepage.dart';
+import 'package:flutter_tutorials/Styled_widgets/SW-Homepage.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const State_modifier(
       child: MaterialApp(
                 debugShowCheckedModeBanner: false,
-                home: Homepage(),
+                home: Sw_homepage()
                    ),
     );
   }
