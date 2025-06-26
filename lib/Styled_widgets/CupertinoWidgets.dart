@@ -23,7 +23,7 @@ class _CupertinowidgetsState extends State<Cupertinowidgets> {
             });}),
           ),
           CupertinoListTile(
-            title: const Text("Choice 2",style: TextStyle(fontFamily: 'Oswald')),
+            title: const Text("Choice 2",style: TextStyle(fontFamily: 'LondrinaSketch',color: Colors.red)),
             leading: CupertinoRadio<String>(value: "Choice 2", groupValue: _val, onChanged: (value){
               setState(() {
               _val=value!;
