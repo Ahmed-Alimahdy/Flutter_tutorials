@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorials/Inherited_widgets/Controllers/State_widget.dart';
-import 'package:flutter_tutorials/Inherited_widgets/Views/Pages/Homepage.dart';
+import 'package:flutter_tutorials/Inherited_widgets/Controller/Controller.dart';
+import 'package:flutter_tutorials/Inherited_widgets/View/Pages/Homepage.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,18 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   state_modifier(
-         child: Builder(
-           builder: (context) {
-             var state=widget_state.of(context);
-             return MaterialApp(
-               theme: ThemeData(primarySwatch: state.app_state.color),
-              debugShowCheckedModeBanner: false,
-              home: const Homepage(),
-                 );
-           }
-         ),
-       );
+    return const State_modifier(
+      child: MaterialApp(
+                debugShowCheckedModeBanner: false,
+                home: Homepage(),
+                   ),
+    );
   }
 }
 
